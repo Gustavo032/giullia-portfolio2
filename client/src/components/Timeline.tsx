@@ -53,7 +53,7 @@ export default function Timeline() {
   useEffect(() => {
     const observers = itemRefs.current.map((ref, index) => {
       if (!ref) return null;
-
+      
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -62,7 +62,7 @@ export default function Timeline() {
         },
         { threshold: 0.3 }
       );
-
+      
       observer.observe(ref);
       return observer;
     });
@@ -98,7 +98,7 @@ export default function Timeline() {
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-secondary to-accent rounded-full"></div>
-
+            
             <div className="space-y-12">
               {timelineData.map((item, index) => (
                 <div
@@ -120,13 +120,13 @@ export default function Timeline() {
                       <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
                     </div>
                   </div>
-
+                  
                   <div className="w-2/12 flex justify-center">
                     <div className={`w-6 h-6 bg-gradient-to-br ${getTypeColor(item.type)} rounded-full border-4 border-white dark:border-dark shadow-lg transition-transform duration-300 ${
                       visibleItems.has(index) ? 'scale-110' : 'scale-100'
                     }`}></div>
                   </div>
-
+                  
                   <div className="w-5/12"></div>
                 </div>
               ))}
