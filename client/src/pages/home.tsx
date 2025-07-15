@@ -7,6 +7,9 @@ import Courses from '../components/Courses';
 import Skills from '../components/Skills';
 import Qualities from '../components/Qualities';
 import Gallery from '../components/Gallery';
+import Blog from '../components/Blog';
+import FAQ from '../components/FAQ';
+import Newsletter from '../components/Newsletter';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import ContactForm from '../components/ContactForm';
@@ -29,6 +32,9 @@ export default function Home() {
         <Skills />
         <Qualities />
         <Gallery />
+        <Blog />
+        <FAQ />
+        <Newsletter />
         <Testimonials />
         <Contact />
         <ContactForm />

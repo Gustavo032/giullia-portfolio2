@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTheme } from '../hooks/useTheme';
+import SearchBar from './SearchBar';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   const navItems = [
-    { href: '#home', label: 'Início' },
     { href: '#about', label: 'Sobre' },
     { href: '#timeline', label: 'Jornada' },
     { href: '#education', label: 'Formação' },
@@ -14,8 +14,10 @@ export default function Header() {
     { href: '#skills', label: 'Competências' },
     { href: '#qualities', label: 'Qualidades' },
     { href: '#gallery', label: 'Galeria' },
+    { href: '#blog', label: 'Blog' },
+    { href: '#faq', label: 'FAQ' },
     { href: '#testimonials', label: 'Depoimentos' },
-    { href: '#contact', label: 'Contato' },
+    { href: '#contact', label: 'Contato' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -33,7 +35,7 @@ export default function Header() {
           <div className="text-2xl font-bold text-primary">
             Giullia
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
@@ -59,7 +61,7 @@ export default function Header() {
                 <i className="fas fa-moon text-blue-400"></i>
               )}
             </button>
-            
+
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
