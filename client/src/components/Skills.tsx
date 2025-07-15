@@ -104,23 +104,8 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-indigo-900 relative overflow-hidden">
-      {/* Geometric background */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full opacity-20">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5" className="text-primary/30"/>
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)" />
-          </svg>
-        </div>
-        <div className="absolute top-1/4 right-10 w-64 h-64 bg-gradient-to-br from-primary/20 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-10 w-48 h-48 bg-gradient-to-br from-secondary/20 to-transparent rounded-full blur-3xl"></div>
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="skills" className="py-20 bg-white dark:bg-dark">
+      <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Competências e Habilidades</h2>

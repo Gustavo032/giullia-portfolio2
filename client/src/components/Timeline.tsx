@@ -86,20 +86,8 @@ export default function Timeline() {
   };
 
   return (
-    <section id="timeline" className="py-20 bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950 dark:via-purple-950 dark:to-pink-950 relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-accent/10 to-primary/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        {/* Floating academic elements */}
-        <div className="absolute top-20 right-20 text-primary/20 text-6xl animate-float">
-          <i className="fas fa-graduation-cap"></i>
-        </div>
-        <div className="absolute bottom-20 left-20 text-secondary/20 text-5xl animate-float delay-500">
-          <i className="fas fa-book"></i>
-        </div>
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="timeline" className="py-20 bg-gray-50 dark:bg-dark/50">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Minha Jornada</h2>

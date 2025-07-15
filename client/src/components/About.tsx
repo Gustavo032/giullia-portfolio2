@@ -1,12 +1,7 @@
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-dark dark:to-slate-900 relative">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 left-1/4 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-20 right-1/3 w-40 h-40 bg-secondary/10 rounded-full blur-2xl"></div>
-      </div>
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="about" className="py-20 bg-white dark:bg-dark">
+      <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Sobre Mim</h2>
