@@ -78,7 +78,10 @@ export default function Gallery() {
   };
 
   return (
-    <section id="gallery" className="py-20 bg-gray-50 dark:bg-dark/50">
+    <section 
+      id="gallery" 
+      className="py-20 bg-gray-50 dark:bg-background" // ALTERADO AQUI: usando dark:bg-background
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -95,8 +98,8 @@ export default function Gallery() {
                 onClick={() => setSelectedCategory(category.id as any)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-primary text-white shadow-lg scale-105'
-                    : 'bg-white dark:bg-dark text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark/70'
+                    ? 'bg-primary --foreground shadow-lg scale-105'
+                    : 'bg-card dark:bg-card text-gray-700 dark:text-gray-300 hover:bg-muted dark:hover:bg-muted' // ALTERADO AQUI
                 }`}
               >
                 <i className={`${category.icon} mr-2`}></i>
@@ -110,7 +113,7 @@ export default function Gallery() {
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white dark:bg-dark rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="bg-card dark:bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer" // ALTERADO AQUI
                 onClick={() => setSelectedImage(item)}
               >
                 <div className="relative overflow-hidden">
@@ -134,11 +137,11 @@ export default function Gallery() {
           {/* Modal */}
           {selectedImage && (
             <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-              <div className="bg-white dark:bg-dark rounded-2xl max-w-4xl max-h-[90vh] overflow-auto">
+              <div className="bg-card dark:bg-card rounded-2xl max-w-4xl max-h-[90vh] overflow-auto"> {/* ALTERADO AQUI */}
                 <div className="relative">
                   <button
                     onClick={() => setSelectedImage(null)}
-                    className="absolute top-4 right-4 z-10 bg-white dark:bg-dark text-gray-800 dark:text-gray-200 rounded-full p-2 hover:bg-gray-100 dark:hover:bg-dark/70"
+                    className="absolute top-4 right-4 z-10 bg-card dark:bg-card text-gray-800 dark:text-gray-200 rounded-full p-2 hover:bg-muted dark:hover:bg-muted" // ALTERADO AQUI
                   >
                     <i className="fas fa-times"></i>
                   </button>

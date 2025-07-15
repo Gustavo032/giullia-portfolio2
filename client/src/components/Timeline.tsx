@@ -42,7 +42,8 @@ export default function Timeline() {
       icon: 'fas fa-certificate'
     },
     {
-      year: '2024',
+      // --- ALTERAÇÃO AQUI: Ano de 2024 para 2025 ---
+      year: '2025',
       title: '4º Semestre Atual',
       description: 'Cursando o 4º semestre de Pedagogia com foco em práticas educacionais inovadoras.',
       type: 'education',
@@ -57,7 +58,7 @@ export default function Timeline() {
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setVisibleItems(prev => new Set([...prev, index]));
+            setVisibleItems(prev => new Set([...Array.from(prev), index]));
           }
         },
         { threshold: 0.3 }
@@ -86,7 +87,10 @@ export default function Timeline() {
   };
 
   return (
-    <section id="timeline" className="py-20 bg-gray-50 dark:bg-dark/50">
+    <section 
+      id="timeline" 
+      className="py-20 bg-gray-50 dark:bg-dark" // --- ALTERAÇÃO AQUI: dark:bg-dark ao invés de dark:bg-dark/50 ---
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -109,7 +113,7 @@ export default function Timeline() {
                   }`}
                 >
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <div className="bg-white dark:bg-dark p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                   <div className="bg-white dark:bg-dark p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-300 dark:border-gray-600">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-2xl font-bold text-primary">{item.year}</span>
                         <div className={`w-12 h-12 bg-gradient-to-br ${getTypeColor(item.type)} rounded-full flex items-center justify-center`}>

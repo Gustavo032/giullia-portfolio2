@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 interface FAQItem {
@@ -71,13 +70,16 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-gray-50 dark:bg-dark/50">
+    <section 
+      id="faq" 
+      className="py-20 bg-background dark:bg-background" // ALTERADO AQUI: bg-background
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Perguntas Frequentes</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 dark:text-gray-400">Conhece mais sobre minha jornada e visão educacional</p>
+            <p className="text-lg text-gray-600 dark:text-gray-400">Conheça mais sobre minha jornada e visão educacional</p>
           </div>
 
           {/* Category Filter */}
@@ -86,10 +88,10 @@ export default function FAQ() {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-105'
-                    : 'bg-white dark:bg-dark hover:bg-gray-100 dark:hover:bg-dark/70 text-gray-700 dark:text-gray-300'
+                    : 'bg-card dark:bg-card hover:bg-muted dark:hover:bg-muted text-muted-foreground dark:text-muted-foreground' // ALTERADO AQUI: bg e text
                 }`}
               >
                 <i className={`${category.icon} mr-2`}></i>
@@ -103,13 +105,13 @@ export default function FAQ() {
             {filteredFAQ.map((item, index) => (
               <div
                 key={index}
-                className="bg-white dark:bg-dark rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl"
+                className="bg-card dark:bg-card rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl" // ALTERADO AQUI: bg
               >
                 <button
                   onClick={() => toggleItem(index)}
-                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-dark/50 transition-colors duration-300"
+                  className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-muted dark:hover:bg-muted transition-colors duration-300" // ALTERADO AQUI: hover bg
                 >
-                  <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 pr-4">
+                  <h3 className="text-lg font-semibold text-foreground dark:text-foreground pr-4"> {/* ALTERADO AQUI: text */}
                     {item.question}
                   </h3>
                   <div className={`transform transition-transform duration-300 ${
@@ -124,7 +126,7 @@ export default function FAQ() {
                 }`}>
                   <div className="px-8 pb-6">
                     <div className="w-full h-px bg-gradient-to-r from-primary to-secondary mb-4"></div>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-muted-foreground dark:text-muted-foreground leading-relaxed"> {/* ALTERADO AQUI: text */}
                       {item.answer}
                     </p>
                   </div>

@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 
 interface FormData {
@@ -69,16 +70,16 @@ export default function ContactForm() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5 p-6 rounded-2xl">
-                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Informações de Contato</h3>
+              <div className="bg-card dark:bg-card p-6 rounded-2xl"> {/* ALTERADO AQUI: de gradient para bg-card */}
+                <h3 className="text-2xl font-semibold text-foreground dark:text-foreground mb-4">Informações de Contato</h3> {/* ALTERADO AQUI: text */}
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mr-4">
                       <i className="fas fa-envelope text-white"></i>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">Email</p>
-                      <p className="text-gray-600 dark:text-gray-400">giulliagomes2000@gmail.com</p>
+                      <p className="font-medium text-foreground dark:text-foreground">Email</p> {/* ALTERADO AQUI: text */}
+                      <p className="text-muted-foreground dark:text-muted-foreground">giulliagomes2000@gmail.com</p> {/* ALTERADO AQUI: text */}
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -86,8 +87,8 @@ export default function ContactForm() {
                       <i className="fab fa-whatsapp text-white"></i>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">WhatsApp</p>
-                      <p className="text-gray-600 dark:text-gray-400">(11) 94152-5603</p>
+                      <p className="font-medium text-foreground dark:text-foreground">WhatsApp</p> {/* ALTERADO AQUI: text */}
+                      <p className="text-muted-foreground dark:text-muted-foreground">(11) 94152-5603</p> {/* ALTERADO AQUI: text */}
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -95,19 +96,19 @@ export default function ContactForm() {
                       <i className="fas fa-map-marker-alt text-white"></i>
                     </div>
                     <div>
-                      <p className="font-medium text-gray-800 dark:text-gray-200">Localização</p>
-                      <p className="text-gray-600 dark:text-gray-400">Itapevi, São Paulo</p>
+                      <p className="font-medium text-foreground dark:text-foreground">Localização</p> {/* ALTERADO AQUI: text */}
+                      <p className="text-muted-foreground dark:text-muted-foreground">Itapevi, São Paulo</p> {/* ALTERADO AQUI: text */}
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-accent/10 to-primary/10 dark:from-accent/5 dark:to-primary/5 p-6 rounded-2xl">
-                <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Horário de Resposta</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-2">
+              <div className="bg-card dark:bg-card p-6 rounded-2xl"> {/* ALTERADO AQUI: de gradient para bg-card */}
+                <h3 className="text-2xl font-semibold text-foreground dark:text-foreground mb-4">Horário de Resposta</h3> {/* ALTERADO AQUI: text */}
+                <p className="text-muted-foreground dark:text-muted-foreground mb-2"> {/* ALTERADO AQUI: text */}
                   Normalmente respondo em até 24 horas durante dias úteis.
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-500">
+                <p className="text-muted-foreground dark:text-muted-foreground text-sm"> {/* ALTERADO AQUI: text */}
                   Segunda a Sexta: 9h às 18h<br />
                   Sábado: 9h às 14h
                 </p>
@@ -115,10 +116,10 @@ export default function ContactForm() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 dark:bg-dark/30 p-8 rounded-2xl">
+            <div className="bg-card dark:bg-card p-8 rounded-2xl"> {/* ALTERADO AQUI: bg */}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-foreground dark:text-foreground mb-2"> {/* ALTERADO AQUI: text */}
                     Nome Completo *
                   </label>
                   <input
@@ -128,13 +129,13 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors"
+                    className="w-full px-4 py-3 border border-border dark:border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-input dark:bg-input text-foreground dark:text-foreground transition-colors" // ALTERADO AQUI: border, bg, text
                     placeholder="Digite seu nome completo"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-foreground dark:text-foreground mb-2"> {/* ALTERADO AQUI: text */}
                     Email *
                   </label>
                   <input
@@ -144,13 +145,13 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors"
+                    className="w-full px-4 py-3 border border-border dark:border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-input dark:bg-input text-foreground dark:text-foreground transition-colors" // ALTERADO AQUI: border, bg, text
                     placeholder="seu@email.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="subject" className="block text-sm font-medium text-foreground dark:text-foreground mb-2"> {/* ALTERADO AQUI: text */}
                     Assunto *
                   </label>
                   <select
@@ -159,7 +160,7 @@ export default function ContactForm() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors"
+                    className="w-full px-4 py-3 border border-border dark:border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-input dark:bg-input text-foreground dark:text-foreground transition-colors" // ALTERADO AQUI: border, bg, text
                   >
                     {subjectOptions.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -170,7 +171,7 @@ export default function ContactForm() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground dark:text-foreground mb-2"> {/* ALTERADO AQUI: text */}
                     Mensagem *
                   </label>
                   <textarea
@@ -180,7 +181,7 @@ export default function ContactForm() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-white dark:bg-dark text-gray-900 dark:text-gray-100 transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-border dark:border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-primary bg-input dark:bg-input text-foreground dark:text-foreground transition-colors resize-none" // ALTERADO AQUI: border, bg, text
                     placeholder="Digite sua mensagem aqui..."
                   />
                 </div>
@@ -204,7 +205,7 @@ export default function ContactForm() {
                 </button>
 
                 {submitMessage && (
-                  <div className="text-center p-4 bg-green-100 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-lg">
+                  <div className="text-center p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg"> {/* ALTERADO AQUI: dark:bg-green-900 */}
                     {submitMessage}
                   </div>
                 )}

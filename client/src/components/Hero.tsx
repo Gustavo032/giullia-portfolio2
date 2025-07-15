@@ -15,7 +15,7 @@ export default function Hero() {
             <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary to-secondary p-1 mb-8 hover:scale-105 transition-transform duration-300">
               <div className="w-full h-full bg-white dark:bg-dark rounded-full flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/giullia.jpg" 
+                  src="/giullia.png" 
                   alt="Giullia dos Santos Gomes - Foto de perfil" 
                   className="w-full h-full object-cover rounded-full"
                 />

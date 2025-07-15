@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-dark">
@@ -22,7 +24,7 @@ export default function Contact() {
               </div>
               <a 
                 href="mailto:giulliagomes2000@gmail.com" 
-                className="bg-primary hover:bg-primary hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground dark:text-primary-foreground px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center" // ALTERADO AQUI
               >
                 <i className="fas fa-envelope mr-2"></i>
                 giulliagomes2000@gmail.com
@@ -43,7 +45,7 @@ export default function Contact() {
                 href="https://wa.me/5511941525603" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-accent hover:bg-accent hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground dark:text-primary-foreground px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center" // ALTERADO AQUI
               >
                 <i className="fab fa-whatsapp mr-2"></i>
                 (11) 94152-5603
@@ -53,8 +55,7 @@ export default function Contact() {
 
           <div className="text-center mt-12">
             <a 
-              href="#" 
-              className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
+              href="/curriculo.pdf" download className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
             >
               <i className="fas fa-download mr-2"></i>
               Download Currículo (PDF)

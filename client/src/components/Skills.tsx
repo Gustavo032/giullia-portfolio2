@@ -126,7 +126,7 @@ export default function Skills() {
                       className={`w-full p-4 rounded-xl text-left transition-all duration-300 ${
                         selectedCategory === index
                           ? `bg-gradient-to-r ${colors.gradient} text-white shadow-lg scale-105`
-                          : 'bg-gray-100 dark:bg-dark/50 hover:bg-gray-200 dark:hover:bg-dark/70 text-gray-700 dark:text-gray-300'
+                          : 'bg-card dark:bg-card hover:bg-muted dark:hover:bg-muted text-gray-700 dark:text-gray-300' // ALTERADO AQUI
                       }`}
                     >
                       <div className="flex items-center">
@@ -142,7 +142,7 @@ export default function Skills() {
             {/* Skills Display */}
             <div className="lg:col-span-2">
               <div className={`transition-all duration-300 ${animationClass}`}>
-                <div className="bg-gray-50 dark:bg-dark/30 p-8 rounded-2xl">
+                <div className="bg-card dark:bg-card p-8 rounded-2xl"> {/* ALTERADO AQUI */}
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${getColorClasses(skills[selectedCategory].color).gradient} rounded-full flex items-center justify-center mr-4`}>
                       <i className={`${skills[selectedCategory].icon} text-white text-2xl`}></i>
@@ -156,7 +156,7 @@ export default function Skills() {
                     {skills[selectedCategory].items.map((item, index) => (
                       <div 
                         key={index}
-                        className="bg-white dark:bg-dark p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+                        className="bg-card dark:bg-card p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105" // ALTERADO AQUI
                         style={{
                           animationDelay: `${index * 100}ms`,
                           animation: animationClass === 'animate-fade-in' ? 'fadeInUp 0.5s ease-out forwards' : ''

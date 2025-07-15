@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 interface BlogPost {
@@ -110,10 +109,10 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg scale-105'
-                    : 'bg-gray-100 dark:bg-dark/50 hover:bg-gray-200 dark:hover:bg-dark/70 text-gray-700 dark:text-gray-300'
+                    : 'bg-card dark:bg-card hover:bg-muted dark:hover:bg-muted text-muted-foreground dark:text-muted-foreground' // ALTERADO AQUI: bg e text
                 }`}
               >
                 {category.name} ({category.count})
@@ -126,7 +125,7 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
             {filteredPosts.map((post) => (
               <article
                 key={post.id}
-                className="bg-gray-50 dark:bg-dark/30 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="bg-card dark:bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer" // ALTERADO AQUI: bg
                 onClick={() => setSelectedPost(post)}
               >
                 <div className="p-6">
@@ -134,22 +133,22 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
                     <span className="text-sm text-primary font-medium">
                       {formatDate(post.date)}
                     </span>
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="text-sm text-muted-foreground dark:text-muted-foreground"> {/* ALTERADO AQUI: text */}
                       <i className="fas fa-clock mr-1"></i>
                       {post.readTime}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 line-clamp-2">
+                  <h3 className="text-xl font-bold text-foreground dark:text-foreground mb-3 line-clamp-2"> {/* ALTERADO AQUI: text */}
                     {post.title}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                  <p className="text-muted-foreground dark:text-muted-foreground mb-4 line-clamp-3"> {/* ALTERADO AQUI: text */}
                     {post.excerpt}
                   </p>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="text-sm text-muted-foreground dark:text-muted-foreground"> {/* ALTERADO AQUI: text */}
                       Por {post.author}
                     </span>
                     <button className="text-primary hover:text-secondary transition-colors duration-300">
@@ -164,31 +163,31 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
           {/* Blog Post Modal */}
           {selectedPost && (
             <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-              <div className="bg-white dark:bg-dark rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto">
+              <div className="bg-card dark:bg-card rounded-2xl max-w-4xl max-h-[90vh] overflow-y-auto"> {/* ALTERADO AQUI: bg */}
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-4">
                       <span className="text-sm text-primary font-medium">
                         {formatDate(selectedPost.date)}
                       </span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
+                      <span className="text-sm text-muted-foreground dark:text-muted-foreground"> {/* ALTERADO AQUI: text */}
                         <i className="fas fa-clock mr-1"></i>
                         {selectedPost.readTime}
                       </span>
                     </div>
                     <button
                       onClick={() => setSelectedPost(null)}
-                      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
+                      className="text-foreground hover:text-muted-foreground dark:text-foreground dark:hover:text-muted-foreground text-2xl" // ALTERADO AQUI: text e hover
                     >
                       <i className="fas fa-times"></i>
                     </button>
                   </div>
                   
-                  <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+                  <h1 className="text-3xl font-bold text-foreground dark:text-foreground mb-4"> {/* ALTERADO AQUI: text */}
                     {selectedPost.title}
                   </h1>
                   
-                  <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-400">
+                  <div className="prose prose-lg max-w-none text-muted-foreground dark:text-muted-foreground"> {/* ALTERADO AQUI: text */}
                     {selectedPost.content.split('\n\n').map((paragraph, index) => (
                       <p key={index} className="mb-4 leading-relaxed">
                         {paragraph}
@@ -197,7 +196,7 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
                   </div>
                   
                   <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-                    <p className="text-gray-500 dark:text-gray-400">
+                    <p className="text-muted-foreground dark:text-muted-foreground"> {/* ALTERADO AQUI: text */}
                       Escrito por <span className="font-medium text-primary">{selectedPost.author}</span>
                     </p>
                   </div>

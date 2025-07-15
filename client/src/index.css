@@ -14,7 +14,7 @@
   --border: hsl(20, 5.9%, 85%);
   --input: hsl(20, 5.9%, 96%);
   --primary: hsl(254, 50%, 55%);
-  --primary-foreground: hsl(0, 0%, 100%);
+  --primary-foreground: hsl(0, 0%, 0%);
   --secondary: hsl(198, 58%, 50%);
   --secondary-foreground: hsl(0, 0%, 100%);
   --accent: hsl(119, 76%, 45%);
@@ -38,10 +38,10 @@
   --card-foreground: hsl(0, 0%, 98%);
   --border: hsl(240, 3.7%, 25%);
   --input: hsl(240, 3.7%, 12%);
-  --primary: hsl(254, 50%, 68%);
-  --primary-foreground: hsl(0, 0%, 0%);
+  --primary: hsl(254, 50%, 68%); /* Cor de fundo do botão primary no modo escuro */
+  --primary-foreground: hsl(0, 0%, 98%); /* ALTERE AQUI para branco (ou algo claro) */
   --secondary: hsl(198, 58%, 73%);
-  --secondary-foreground: hsl(0, 0%, 0%);
+  --secondary-foreground: hsl(0, 0%, 0%); /* Mantenha esse aqui se for para um botão secondary de fundo claro */
   --accent: hsl(119, 76%, 75%);
   --accent-foreground: hsl(0, 0%, 0%);
   --destructive: hsl(0, 62.8%, 60%);

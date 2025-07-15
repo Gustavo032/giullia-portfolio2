@@ -24,7 +24,7 @@ export default function Newsletter() {
     return (
       <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5">
         <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto text-center">
+          <div className="max-w-2xl mx-auto text-center border border-gray-200 dark:border-gray-700">
             <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg">
               <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className="fas fa-check text-white text-3xl"></i>
@@ -51,7 +51,7 @@ export default function Newsletter() {
   return (
     <section className="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/5 dark:to-secondary/5">
       <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center border border-gray-200 dark:border-gray-700">
           <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg">
             <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
               <i className="fas fa-envelope text-white text-3xl"></i>

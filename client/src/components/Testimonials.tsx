@@ -109,13 +109,13 @@ export default function Testimonials() {
             <div className="flex justify-center mt-8 space-x-4">
               <button
                 onClick={prevTestimonial}
-                className="bg-primary hover:bg-primary hover:opacity-90 text-white dark:text-black p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground dark:text-primary-foreground p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg" // ALTERADO AQUI
               >
                 <i className="fas fa-chevron-left"></i>
               </button>
               <button
                 onClick={nextTestimonial}
-                className="bg-primary hover:bg-primary hover:opacity-90 text-white dark:text-black p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground dark:text-primary-foreground p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg" // ALTERADO AQUI
               >
                 <i className="fas fa-chevron-right"></i>
               </button>
@@ -127,7 +127,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
-                    index === currentTestimonial ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'
+                    index === currentTestimonial ? 'bg-foreground dark:bg-foreground' : 'bg-muted-foreground dark:bg-muted-foreground' // ALTERADO AQUI
                   }`}
                 />
               ))}
