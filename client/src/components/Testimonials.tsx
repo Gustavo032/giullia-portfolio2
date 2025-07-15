@@ -109,13 +109,13 @@ export default function Testimonials() {
             <div className="flex justify-center mt-8 space-x-4">
               <button
                 onClick={prevTestimonial}
-                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-white dark:text-black p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
               >
                 <i className="fas fa-chevron-left"></i>
               </button>
               <button
                 onClick={nextTestimonial}
-                className="bg-primary hover:bg-primary hover:opacity-90 text-primary-foreground p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-white dark:text-black p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
               >
                 <i className="fas fa-chevron-right"></i>
               </button>

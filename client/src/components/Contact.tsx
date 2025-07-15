@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-dark/50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-dark">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -22,7 +22,7 @@ export default function Contact() {
               </div>
               <a 
                 href="mailto:giulliagomes2000@gmail.com" 
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
+                className="bg-primary hover:bg-primary hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
               >
                 <i className="fas fa-envelope mr-2"></i>
                 giulliagomes2000@gmail.com
@@ -43,7 +43,7 @@ export default function Contact() {
                 href="https://wa.me/5511941525603" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-accent hover:bg-accent/90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
+                className="bg-accent hover:bg-accent hover:opacity-90 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center"
               >
                 <i className="fab fa-whatsapp mr-2"></i>
                 (11) 94152-5603
