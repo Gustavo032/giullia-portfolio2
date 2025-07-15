@@ -37,15 +37,21 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Frontend Components
-- **Header**: Navigation with dark/light theme toggle and mobile menu
+- **Header**: Enhanced navigation with dark/light theme toggle and mobile menu
 - **Hero**: Main landing section with profile photo and introduction
 - **About**: Personal journey and mission statement
+- **Stats**: Animated statistics section with key achievements
+- **Timeline**: Interactive timeline of educational journey
 - **Education**: Academic background and qualifications
-- **Courses**: Complementary courses and certifications
+- **Courses**: Complementary courses and certifications grid
+- **Skills**: Interactive skills showcase with category filtering
 - **Qualities**: Personal and professional skills with animated progress bars
+- **Gallery**: Photo gallery with category filtering and modal view
 - **Testimonials**: Rotating testimonials with auto-play functionality
 - **Contact**: Contact information with direct links to email and WhatsApp
+- **ContactForm**: Interactive contact form with email integration
 - **Footer**: Simple footer with copyright information
+- **BackToTop**: Enhanced scroll-to-top button with progress indicator
 
 ### Backend Components
 - **Express Server**: RESTful API structure (routes not yet implemented)

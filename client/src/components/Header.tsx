@@ -8,9 +8,13 @@ export default function Header() {
   const navItems = [
     { href: '#home', label: 'Início' },
     { href: '#about', label: 'Sobre' },
+    { href: '#timeline', label: 'Jornada' },
     { href: '#education', label: 'Formação' },
     { href: '#courses', label: 'Cursos' },
+    { href: '#skills', label: 'Competências' },
     { href: '#qualities', label: 'Qualidades' },
+    { href: '#gallery', label: 'Galeria' },
+    { href: '#testimonials', label: 'Depoimentos' },
     { href: '#contact', label: 'Contato' },
   ];
 
