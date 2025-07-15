@@ -94,23 +94,29 @@ Preferred communication style: Simple, everyday language.
 
 ## Deployment Strategy
 
-### Build Process
-1. **Client Build**: Vite builds React application to `dist/public`
-2. **Server Build**: esbuild bundles server code to `dist/index.js`
-3. **Database Migration**: Drizzle kit for schema migrations
-4. **Environment Variables**: DATABASE_URL for PostgreSQL connection
+### Vercel Deployment (Recommended)
+1. **Structure**: Project optimized for Vercel static deployment
+2. **Build Process**: Vite builds React application to `dist/public`
+3. **Configuration**: `vercel.json` configured for SPA routing
+4. **No Backend**: Static deployment - no server-side functionality needed
 
-### Production Setup
-- **Start Command**: `npm start` runs the bundled server
-- **Static Assets**: Served from `dist/public`
-- **API Routes**: Handled by Express server
-- **Database**: PostgreSQL connection via environment variable
+### Build Process
+1. **Client Build**: `npm run build` creates optimized static files
+2. **Output Directory**: `dist/public` contains all deployable assets
+3. **Environment Variables**: No external APIs required for current version
+4. **Static Assets**: All content is hardcoded and optimized
 
 ### Development Workflow
-- **Dev Server**: `npm run dev` starts both client and server
+- **Dev Server**: `npm run dev` starts development server
 - **Type Checking**: `npm run check` validates TypeScript
-- **Database**: `npm run db:push` applies schema changes
 - **Hot Reload**: Vite HMR for instant development feedback
+- **Local Testing**: Server runs on `localhost:5000`
+
+### Deployment Options
+- **Vercel**: Push to GitHub and import to Vercel (recommended)
+- **Netlify**: Deploy `dist/public` folder
+- **GitHub Pages**: Deploy `dist/public` folder
+- **Any Static Host**: Upload contents of `dist/public`
 
 ### Content Management
 - **Static Content**: All content is hardcoded in components
