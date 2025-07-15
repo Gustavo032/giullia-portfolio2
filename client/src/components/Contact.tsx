@@ -8,9 +8,9 @@ export default function Contact() {
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 dark:text-gray-400">Entre em contato para oportunidades de colaboração ou networking</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-card dark:bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mr-4">
                   <i className="fas fa-envelope text-white text-2xl"></i>
@@ -28,8 +28,8 @@ export default function Contact() {
                 giulliagomes2000@gmail.com
               </a>
             </div>
-            
-            <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+            <div className="bg-card dark:bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-secondary rounded-full flex items-center justify-center mr-4">
                   <i className="fab fa-whatsapp text-white text-2xl"></i>
@@ -50,7 +50,7 @@ export default function Contact() {
               </a>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <a 
               href="#" 

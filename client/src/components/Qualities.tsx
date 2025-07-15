@@ -46,7 +46,7 @@ export default function Qualities() {
   };
 
   return (
-    <section ref={sectionRef} id="qualities" className="py-20 bg-gray-50 dark:bg-dark/50">
+    <section ref={sectionRef} id="qualities" className="py-20 bg-muted/50 dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
@@ -58,7 +58,7 @@ export default function Qualities() {
             {[0, 1].map((columnIndex) => (
               <div key={columnIndex} className="space-y-6">
                 {qualities.slice(columnIndex * 4, (columnIndex + 1) * 4).map((quality, index) => (
-                  <div key={index} className="bg-white dark:bg-dark p-6 rounded-2xl shadow-lg">
+                  <div key={index} className="bg-card dark:bg-card p-6 rounded-2xl shadow-lg border border-border">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{quality.name}</h3>
                       <span className={`text-${quality.color} font-bold`}>{quality.percentage}%</span>

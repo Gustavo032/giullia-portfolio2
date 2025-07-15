@@ -7,9 +7,9 @@ export default function Education() {
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Formação Acadêmica</h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
           </div>
-          
+
           <div className="space-y-8">
-            <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-card dark:bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mr-4">
                   <i className="fas fa-graduation-cap text-white text-2xl"></i>
@@ -26,8 +26,8 @@ export default function Education() {
                 </div>
               </div>
             </div>
-            
-            <div className="bg-white dark:bg-dark p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+            <div className="bg-card dark:bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border">
               <div className="flex items-center mb-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mr-4">
                   <i className="fas fa-school text-white text-2xl"></i>
