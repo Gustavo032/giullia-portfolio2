@@ -1,0 +1,90 @@
+Crie um site pessoal simples, moderno e responsivo para uma estudante de pedagogia chamada Giullia dos Santos Gomes.
+
+O objetivo do site é apresentar seu perfil acadêmico e profissional como uma futura pedagoga. Deve ser leve, acessível e com foco em educação e formação.
+
+🧠 Informações da Giullia:
+Nome: Giullia dos Santos Gomes
+
+Nascimento: 03/12/2005 (19 anos)
+
+Cidade: Itapevi/SP
+
+Email: giulliagomes2000@gmail.com
+
+Telefone: (11) 94152-5603
+
+🎓 Formação:
+Ensino Médio — PEI Mary Mallet Cyrino (fev/2018 – dez/2023)
+
+Licenciatura em Pedagogia — Anhembi Morumbi (mar/2024 – cursando, 4º semestre)
+
+📚 Cursos Complementares:
+Psicologia Experimental (fev/2024)
+
+Psicologia Social (fev/2024)
+
+Psicologia Educacional e Escolar (fev/2024)
+
+Desenvolvimento Profissional (jan/2024)
+
+Psicopedagogia (mar/2024)
+
+Excel Básico (mar/2024)
+
+Conhecimentos Pedagógicos (mar/2024)
+
+Inglês (jan/2024)
+
+💡 Qualidades pessoais:
+Responsável e dedicada
+
+Ótima comunicação
+
+Boa escuta ativa
+
+Trabalho em equipe
+
+Proatividade
+
+Vontade de aprender
+
+Mão na massa
+
+✨ Requisitos do site:
+Deve ser uma landing page de apresentação pessoal com:
+
+Seção de boas-vindas com nome completo, cidade, idade e chamada principal
+
+Campo para exibir uma foto de perfil
+
+Seção “Sobre Mim” com texto descritivo baseado nos dados acima
+
+Seção de Formação Acadêmica
+
+Seção de Cursos Complementares
+
+Seção de Qualidades Pessoais
+
+Seção de Contato com ícones de e-mail e WhatsApp clicáveis
+
+Design leve e com visual educacional, pode usar tons claros (ex: lilás, azul claro, verde claro)
+
+Deve ser responsivo (funcionar bem no celular)
+
+Usar React (ou Next.js se quiser), com Tailwind CSS
+
+Estrutura de componentes (ex: Header, SobreMim, Formacao, Cursos, Contato)
+
+Campo de imagem de perfil (pode ser <img src="/giullia.jpg" /> como exemplo)
+
+O site não precisa ter backend nem painel de edição. Apenas HTML/CSS/JS (com React) bem organizado. Opcional: botão para baixar currículo em PDF (pode ser um link). O código deve estar limpo e fácil de alterar.
+
+algumas funções:
+Dark/light mode toggle with system preference detection
+section with animated progress bars
+Testimonials carousel with navigation controls
+Scroll-to-top button with smooth animations
+Improved mobile navigation with hamburger menu
+Hover effects and smooth transitions throughout
+
+
