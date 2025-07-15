@@ -1,7 +1,19 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-dark">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950 dark:to-teal-950 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0">
+        <div className="absolute top-10 right-10 w-72 h-72 bg-gradient-to-br from-emerald-200/30 to-teal-200/30 dark:from-emerald-800/30 dark:to-teal-800/30 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-br from-teal-200/30 to-cyan-200/30 dark:from-teal-800/30 dark:to-cyan-800/30 rounded-full blur-3xl"></div>
+        {/* Communication icons */}
+        <div className="absolute top-1/4 left-1/4 text-emerald-300/20 dark:text-emerald-700/20 text-4xl animate-float">
+          <i className="fas fa-envelope"></i>
+        </div>
+        <div className="absolute bottom-1/3 right-1/3 text-teal-300/20 dark:text-teal-700/20 text-5xl animate-float delay-700">
+          <i className="fas fa-phone"></i>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Contato</h2>

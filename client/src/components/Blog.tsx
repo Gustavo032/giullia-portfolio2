@@ -95,8 +95,20 @@ Vejo que escolhi a profissão certa. Cada dia confirma minha paixão pela educa�
   };
 
   return (
-    <section id="blog" className="py-20 bg-white dark:bg-dark">
-      <div className="container mx-auto px-4">
+    <section id="blog" className="py-20 bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-amber-200/20 to-orange-200/20 dark:from-amber-800/20 dark:to-orange-800/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-72 h-72 bg-gradient-to-br from-orange-200/20 to-red-200/20 dark:from-orange-800/20 dark:to-red-800/20 rounded-full blur-3xl"></div>
+        {/* Writing elements */}
+        <div className="absolute top-1/3 right-1/4 text-amber-300/20 dark:text-amber-700/20 text-6xl animate-float">
+          <i className="fas fa-feather-alt"></i>
+        </div>
+        <div className="absolute bottom-1/4 left-1/3 text-orange-300/20 dark:text-orange-700/20 text-5xl animate-float delay-1000">
+          <i className="fas fa-pen-fancy"></i>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-200">Blog Educacional</h2>
